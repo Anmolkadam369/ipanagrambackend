@@ -270,7 +270,7 @@ const deleteEmployee = async (req,res)=>{
 
 const sortedByLocation = async (req, res) => {
   try {
-    const employees = await employeeModel.find().collation({ locale: 'en', strength: 1 }).sort({ location: 1 });
+    const employees = await employeeModel.find({isDeleted:false}).collation({ locale: 'en', strength: 1 }).sort({ location: 1 });
     console.log(employees);
 
     const sortedEmployees = [
@@ -292,7 +292,7 @@ const sortedByLocation = async (req, res) => {
        console.log(typeof filter)
         if (filter === 1)  sortOption = { firstName: 1 };
         if (filter === -1)  sortOption = { firstName: -1 };
-        const employees = await employeeModel.find().collation({ locale: 'en', strength: 1 }).sort(sortOption);
+        const employees = await employeeModel.find({isDeleted:false}).collation({ locale: 'en', strength: 1 }).sort(sortOption);
         return res.status(200).send({ status: true, data:employees});
       } catch (error) {
         console.error(error);
