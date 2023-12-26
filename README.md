@@ -34,13 +34,13 @@ Routes
 
 1 signUP and Login :
 
-post "/employeesignup"
+post "/employeesignup"             sign up for Employee
 
-post '/employeesignIn'
+post '/employeesignIn'              sign in for Employee
 
-post "/managersignup"
+post "/managersignup"               sign up for Managers
 
-post '/managersignIn'
+post '/managersignIn'              sign in for Employee
 
 
 
