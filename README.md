@@ -44,6 +44,7 @@ post '/managersignIn'
 
 
 
+
 2 Employee : 
 
 get '/employees/:userId'     get All Employees
@@ -55,9 +56,13 @@ put '/employee/:userId/:employeeId'     update Employee
 delete '/employee/:userId/:employeeId'   Delete Employee
 
 
+
+
 3 Manager : 
 
 get '/manager/:userId'       get Individual Manager 
+
+
 
 
 4 Department : 
@@ -71,11 +76,17 @@ put '/departments/:userId/:departmentId',          update Department
 delete '/departments/:userId/:departmentId',       delete Department
 
 
+
+
 5 Sorting : 
 
 get '/sortedByLocation/:userId'                 sorted by Location
 
 post '/sortedByName/:userId'                     sorted by Name
+
+
+
+
 
 
 
